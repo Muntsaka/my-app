@@ -5,6 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 export default function App() {
   let openImagePickerAsync = async () => {
     const [selectedImage, setSelectedImage] = React.useState(null);
+
     let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
     if (permissionResult.granted === false) {
@@ -13,7 +14,7 @@ export default function App() {
     }
 
     let pickerResult = await ImagePicker.launchImageLibraryAsync();
-    console.log(pickerResult);
+
     if (pickerResult.cancelled === true) {
       return;
     }
@@ -47,24 +48,35 @@ export default function App() {
 }
   
   const styles = StyleSheet.create({
-    /*container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    logo: {
-      width: 305,
-      height: 159,
-      marginBottom: 20,
-    },
-    instructions: {
-      color: '#888',
-      fontSize: 18,
-      marginHorizontal: 15,
-      marginBottom: 10,*/
-      thumbnail: {
-        width: 300,
-        height: 300,
-        resizeMode: "contain"}
-  });
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logo: {
+    width: 305,
+    height: 159,
+    marginBottom: 20,
+  },
+  instructions: {
+    color: '#888',
+    fontSize: 18,
+    marginHorizontal: 15,
+    marginBottom: 10,
+  },
+  button: {
+    backgroundColor: 'blue',
+    padding: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    fontSize: 20,
+    color: '#fff',
+  },
+  thumbnail: {
+    width: 300,
+    height: 300,
+    resizeMode: 'contain',
+  },
+});
