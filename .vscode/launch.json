@@ -5,8 +5,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "command": "run expo",
-            "name": "Run npm start",
+            "command": "npm start",
+            "name": "Run expo",
             "request": "launch",
             "type": "node-terminal"
         },
