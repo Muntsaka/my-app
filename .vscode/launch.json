@@ -5,16 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "command": "npm start",
+            "command": "run expo",
             "name": "Run npm start",
             "request": "launch",
             "type": "node-terminal"
         },
-        {
-            "command": "npm run devtools",
-            "name": "react-devtools",
-            "request": "launch",
-            "type": "node-terminal",
-        }
     ]
 }
