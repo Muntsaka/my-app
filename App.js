@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
+import ColoredButton from './components/ColoredButton'
 
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
@@ -48,7 +49,13 @@ export default function App() {
       <Text style={styles.instructions}>
         To share a photo from your phone with a friend, just press the button below!
       </Text>
-
+      
+      {/*Let's do some code reutilization:*/}
+      
+      {/*EXERCISE 1: Go to ColoredButton Component (in /components folder) and try to understand it. Then adapt it so that we can pass a specific text*/}
+      <ColoredButton onPress={()=>{alert("clicked")}} color="blue"/>
+    
+      {/*EXERCISE 2: Use ColoredButton Component instead of TouchableOpacity below. Adapt it so that you can pass a specific style*/}
       <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
