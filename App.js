@@ -35,6 +35,11 @@ export default function App() {
     await Sharing.shareAsync(selectedImage.localUri);
   };
 
+  let creaAlerta = (text) => {
+    console.log("asdfadsf");
+    alert(text);
+  }
+
   if (selectedImage !== null) {
     return (
       <View style={styles.container}>
@@ -46,9 +51,7 @@ export default function App() {
     );
   }
 
-let creaAlerta = (text) => {
-  alert(text);
-}
+  
 
   return (
     <View style={styles.container}>
@@ -59,10 +62,10 @@ let creaAlerta = (text) => {
       
       {/*Let's do some code reutilization:*/}
       
-      {/*EXERCISE 1: Go to ColoredButton Component (in /components folder) and try to understand it. Then adapt it so that we can pass a specific text*/}
-      <ColoredButton onPress={creaAlerta("clicked")} color="yellow" text="botó"/>
+      {/*EXERCISE 1 (DONE): Go to ColoredButton Component (in /components folder) and try to understand it. Then adapt it so that we can pass a specific text*/}
+      <ColoredButton onPress={()=>creaAlerta("clicked")} color="yellow" text="botó"/>
     
-      {/*EXERCISE 2: Use ColoredButton Component instead of TouchableOpacity below. Adapt it so that you can pass a specific style*/}
+      {/*EXERCISE 2: Use ColoredButton Component instead of TouchableOpacity below.*/}
       <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
