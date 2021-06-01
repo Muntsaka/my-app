@@ -46,6 +46,10 @@ export default function App() {
     );
   }
 
+let creaAlerta = (text) => {
+  alert(text);
+}
+
   return (
     <View style={styles.container}>
       <Image source={{ uri: 'https://i.imgur.com/TkIrScD.png' }} style={styles.logo} />
@@ -56,16 +60,18 @@ export default function App() {
       {/*Let's do some code reutilization:*/}
       
       {/*EXERCISE 1: Go to ColoredButton Component (in /components folder) and try to understand it. Then adapt it so that we can pass a specific text*/}
-      <ColoredButton onPress={()=>{alert("clicked")}} color="blue"/>
+      <ColoredButton onPress={creaAlerta("clicked")} color="yellow" text="botó"/>
     
       {/*EXERCISE 2: Use ColoredButton Component instead of TouchableOpacity below. Adapt it so that you can pass a specific style*/}
       <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
+
+      <ColoredButton onPress={openImagePickerAsync} color="red" text="prova"/>
     </View>
   );
 }
-
+    
 
   const styles = StyleSheet.create({
   container: {

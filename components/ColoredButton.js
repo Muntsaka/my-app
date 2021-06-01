@@ -2,13 +2,13 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const ColorButton = ({onPress, color}) => {
+const ColoredButton = ({onPress, color, text}) => {
 return(
   <TouchableOpacity onPress={onPress} style={{backgroundColor:"grey", padding:10, margin:10}} >
-    <Text style={{color:color}}>FIXED TEXT</Text>
+    <Text style={{color:color}}>{text}</Text>
   </TouchableOpacity>)
 }
 
 
-export default ColorButton;
+export default ColoredButton;
 
