@@ -3,6 +3,9 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
 
+
+
+
 export default function App() {
   let [selectedImage, setSelectedImage] = React.useState(null);
 
@@ -55,7 +58,8 @@ export default function App() {
     </View>
   );
 }
-  
+
+
   const styles = StyleSheet.create({
   container: {
     flex: 1,
