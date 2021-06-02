@@ -7,4 +7,8 @@
       </View>
     );
     }
-    export default ColoredScreen;
+    export default function App() {
+      return(
+        <ColoredScreen></ColoredScreen>
+      )
+    };
