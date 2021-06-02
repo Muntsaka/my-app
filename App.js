@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import Screen1 from './screens/Screen1';
 import ColoredButton from './components/ColoredButton';
-import ColoredScreen from './components/ColoredScreen'
+import ColoredScreen from './components/ColoredScreen';
 
 //Exercise 3
   /*

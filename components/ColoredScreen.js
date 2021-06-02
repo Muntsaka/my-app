@@ -3,7 +3,7 @@
 
   const ColoredScreen = () => {
     return (
-      <View style={{backgroundColor}}>
+      <View style={{backgroundColor: "red", font:"bold", padding:15}}>
       </View>
     );
     }
