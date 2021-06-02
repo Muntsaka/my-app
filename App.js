@@ -14,7 +14,7 @@ import ColoredScreen from './components/ColoredScreen';
     
 export default function App() {
   return(
-    <Screen1></Screen1> 
+    <ColoredScreen></ColoredScreen> 
   )
   
 }
