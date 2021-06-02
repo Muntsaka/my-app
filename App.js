@@ -8,11 +8,10 @@ import Screen1 from './screens/Screen1';
     In App.js add two ColoredButtons with texts ("Blue Screen", "Yellow Screen"). If you click first button you will show a Blue Screen, second button you will show a Yellow Screen.
   */
 
-<View
-<ColoredButton onPress={ColoredScreen} color="blue" text="Blue Screen"/>
 
+<ColoredButton onPress={ColoredScreen} color="blue" text="Blue Screen"/>
 <ColoredButton onPress={ColoredScreen} color="yellow" text="Yellow Screen"/>
-</View>
+
     
 export default function App() {
   return(
