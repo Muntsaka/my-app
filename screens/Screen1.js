@@ -50,7 +50,6 @@ const Screen1 = ({}) => {
   }
 
   
-
   return (
     <View style={styles.container}>
       <Image source={{ uri: 'https://i.imgur.com/TkIrScD.png' }} style={styles.logo} />
