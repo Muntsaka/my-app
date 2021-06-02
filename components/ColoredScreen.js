@@ -7,3 +7,4 @@
       </View>
     );
     }
+    export default ColoredScreen;
