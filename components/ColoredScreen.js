@@ -1,4 +1,11 @@
-const ColoredScreen = ({color}) => {
-    
-}
-  export default ColoredScreen;
+
+
+
+  const ColoredScreen = () => {
+    return (
+      <View
+      <View style={{ backgroundColor}}
+      </View>
+    );
+  };
+  
