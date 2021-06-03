@@ -3,9 +3,9 @@ import React from 'react';
 import { View } from 'react-native';
 
 
-  const ColoredScreen = () => {
+  const ColoredScreen = ({bgColor}) => {
     return (
-      <View style={{backgroundColor: "red", font:"bold", padding:15}}>
+      <View style={{backgroundColor: bgColor, height:"100%", width:"100%"}}>
       </View>
     );
     }
