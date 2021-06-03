@@ -4,13 +4,8 @@ import Screen1 from './screens/Screen1';
 import ColoredButton from './components/ColoredButton';
 import ColoredScreen from './components/ColoredScreen';
 
-//Exercise 3
-  /*
-    Create a new Screen component (call it ColoredScreen.js) which is an empty <View/> with background color as a parameter.
-    In App.js add two ColoredButtons with texts ("Blue Screen", "Yellow Screen"). If you click first button you will show a Blue Screen, second button you will show a Yellow Screen.
-  */
- 
-
+//Exercise3 
+//Using a component ColoredScreen with a parameter, paint the screen in blue. 
     
 export default function App() {
   return(
