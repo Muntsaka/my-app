@@ -1,10 +1,9 @@
 import { setStatusBarBackgroundColor } from 'expo-status-bar';
 import React from 'react';
-import ColoredScreen from './components/ColoredScreen';
+import Screen2 from './screens/Screen2'
 
 //Exercise4
-//Change ColoredScreen.js so that on click anywhere in the screen it changes to black.
-    
+//Read Screen2.js    
 export default function App() {
-  return <ColoredScreen bgColor="blue" />
+  return <Screen2/>
 }
