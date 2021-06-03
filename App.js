@@ -14,7 +14,8 @@ import ColoredScreen from './components/ColoredScreen';
     
 export default function App() {
   return(
-    <ColoredScreen></ColoredScreen> 
-  )
+      <View Style={{ColoredScreen: 'blue'}}>
+      </View>
+    )
   
 }
