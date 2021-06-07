@@ -39,5 +39,3 @@ const Screen2 = () => {
 
   return <View>{list()}</View>;
 };
-
-export default Screen2;
