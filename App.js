@@ -1,5 +1,5 @@
 import React from 'react';
-import Screen2 from './screens/Screen2'
+import Screen2 from './screens/Screen2-Solution'
 
 
 
