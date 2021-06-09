@@ -1,9 +1,10 @@
 import React from 'react';
-import circleComponent from './components/circleComponent'
+import Circle from './components/CircleComponent';
+import CircleComponent from './components/CircleComponent'
 
 
 const App = () => {
-   return <circleComponent/> 
+   return <CircleComponent/> 
 }
 
 export default App;
