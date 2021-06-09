@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react';
 
 
-const Circle 
+const Circle =
 <View style={{
     width: 60,
     height: 60,
@@ -12,4 +12,4 @@ const Circle
   }}>
   </View>
 
-  export default circleComponent;
+  export default Circle;
