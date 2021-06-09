@@ -1,6 +1,6 @@
 
 import React from 'react';
-import TaleComponent from './TaleComponent';
+import TaleComponent from './TaleComponent-Solution';
 const Screen2 = ({}) => {
   
   /*Define an array of 5 objects Tale, each tale has properties name and author*/
@@ -16,7 +16,7 @@ const Screen2 = ({}) => {
     The React View has a border and a margin of 15.
   */
   return( 
-   tales.map((temp) => <TaleComponent name={temp.name} author={temp.author}/>)
+   tales.map((tale) => <TaleComponent name={tale.name} author={tale.author}/>)
   );
   
 };
