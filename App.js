@@ -1,5 +1,4 @@
 import React from 'react';
-import Circle from './components/CircleComponent';
 import CircleComponent from './components/CircleComponent'
 
 
