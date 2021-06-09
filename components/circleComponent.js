@@ -1,10 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View } from 'react';
 
-  const circleComponent = ({bgColor}) => {
-    return (
-      <View style={{backgroundColor: bgColor, height:"150", width:"150", borderRadius:"150/2"}}>
-      </View>
-    );
-    }
-    export default circleComponent;
+
+const Circle 
+<View style={{
+    width: 60,
+    height: 60,
+    justifyContent: "center",
+    borderRadius: 60 / 2,
+    backgroundColor: 'orange',
+  }}>
+  </View>
+
+  export default circleComponent;

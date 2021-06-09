@@ -1,9 +1,9 @@
 import React from 'react';
-import {View} from 'react-native' 
+import circleComponent from './components/circleComponent'
 
 
 const App = () => {
-   return <View CircleComponent/> 
+   return <circleComponent/> 
 }
 
 export default App;
