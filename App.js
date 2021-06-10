@@ -1,10 +1,9 @@
 import React from 'react';
-import CircleComponent from './components/CircleComponent'
-
+import Screen3 from './screens/Screen3'
 
 const App = () => {
    return (
-   <CircleComponent bgColor="blue"/>
+   <Screen3 />
    );
    
 };
