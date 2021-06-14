@@ -8,7 +8,7 @@ const Screen3 = ({ }) => {
   const CircleArray = () => {
     const array = [];
     for (let i = 0; i < 100; i++) {
-      const circle = (color="blue");
+      const circle = (color = "blue");
       array.push(circle);
     }
     return array
