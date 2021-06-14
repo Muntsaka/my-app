@@ -1,36 +1,43 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import ReactDOM from 'react-dom'
+import React from 'react'
+ 
 
-
-export default class App extends Component {
-
+const Screen3 = ({}) => 
+{
+  class Circle extends React.Component {
   render() {
+    var circleStyle = {
+      padding: 10,
+      margin: 20,
+      display: "inline-block",
+      backgroundColor: this.props.bgColor,
+      borderRadius: "50%",
+      width: 100,
+      height: 100
+    };
+
+    var colors = ["#393E41", "#E94F37", "#1C89BF", "#A1D363",
+          "#85FFC7", "#297373", "#FF8552", "#A40E4C"];
+
+    var renderData = [];
+
+    for (var i = 0; i < colors.length; i++) {
+      var color = colors[i];
+      renderData.push(<Circle key={i + color} bgColor={color}/>);
+    };
+    
     return (
-      <View style={styles.container}>
-        <View style={styles.CircleShape} />
-      </View>
+        <div style={circleStyle}>
+        </div>
     );
+    }
   }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#e5e5e5",
-  },
-  headerText: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10,
-    fontWeight: "bold"
-  }, 
-  CircleShape: {
-    width: 150,
-    height: 150,
-    borderRadius: 150 / 2,
-    backgroundColor: '#FF9800',
-  },
-
-});
+  ReactDOM.render(
+   <div>
+    {renderData}
+   </div>,
+   document.querySelector("#container")
+  );
+  }
+export default Screen3;
