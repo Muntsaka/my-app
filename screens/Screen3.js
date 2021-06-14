@@ -1,19 +1,20 @@
 
 import React from 'react'
+import CircleComponent from '../components/CircleComponent';
  
 
 const Screen3 = ({}) => {
   
 const CircleArray = () => {
-const Array = [];
+const array = [];
 for (let i=0; i<100; i++) {
-const circle = (color="blue");
+const circle = {color:"blue"};
 array.push(circle);
 }
-return Array
+return array
 }
 
-return (CircleArray().map((color) => <CircleComponent color={color.color}/>)
+return (CircleArray().map((element) => <CircleComponent bgColor={element.color}/>)
 );
 }
 
