@@ -6,10 +6,17 @@ import CircleComponent from '../components/CircleComponent';
 const Screen3 = ({ }) => {
 
   const CircleArray = () => {
-    const array = [];
+    const array = [{color:"blue"}, {color:"green"}, {color:"blue"}, {color:"green"}];
     for (let i = 0; i < 100; i++) {
       const circle = {color};
-      let color = ["red", "lightblue", "pink", "yellow", "brown", "magenta"];
+      const isOdd = (num)=> { return num % 2;} 
+      const color = (num)=>{
+           let color = 'blue';
+           if(isOdd (num)) color ='blue' //even
+           else color ='green' //odd
+           if(isPrime(num)) color = 'orange' //prime 
+        return color ;
+      }
       array.push(circle);
     }
     return array
