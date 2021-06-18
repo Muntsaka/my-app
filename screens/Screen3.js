@@ -9,18 +9,21 @@ const Screen3 = ({ }) => {
     const array = [];
     
     for (let i=0; i<100; i++){
+      console.log(i)
+      let newcircle;
       if(i%2==0){
-        const newcircle = {color:"blue"};
-        array.push(newcircle);
+        newcircle = {color:"blue", position:i};
+        
       } else{
-        const newcircle = {color:"green"};
-        array.push(newcircle);
+        newcircle = {color:"green", position:i};
+        
       }
+      console.log(newcircle)
+      array.push(newcircle);
     }
   return array
 }
-return (CircleArray().map(element, position) => <CircleComponent bgColor={element.color} position={element.position} />
-);
-};
-
+return (CircleArray().map((element) => <CircleComponent bgColor={element.color} position={element.position} />
+));
+}
 export default Screen3;
