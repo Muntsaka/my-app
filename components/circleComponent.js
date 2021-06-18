@@ -7,9 +7,9 @@ import { StyleSheet } from 'react-native';
 const CircleComponent = ({bgColor}) => {
 return <TouchableOpacity
 style={ {backgroundColor: bgColor, height: 60, width: 60, justifyContent: "center",
-borderRadius: 60 / 2}}
+borderRadius: 60 / 2, position: 1}}
 
-onPress={() => alert(bgColor.position)}
+onPress={() => alert(position)}
 >
 </TouchableOpacity>
 };

@@ -10,18 +10,16 @@ const Screen3 = ({ }) => {
     
     for (let i=0; i<100; i++){
       if(i%2==0){
-        const newcircle = {color:"blue", position:1};
+        const newcircle = {color:"blue"};
         array.push(newcircle);
       } else{
-        const newcircle = {color:"green", position:2};
+        const newcircle = {color:"green"};
         array.push(newcircle);
       }
     }
-
   return array
 }
-
-return (CircleArray().map((element) => <CircleComponent bgColor={element.color} position={element.position} />)
+return (CircleArray().map(element, position) => <CircleComponent bgColor={element.color} position={element.position} />
 );
 };
 
