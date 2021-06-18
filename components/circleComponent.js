@@ -9,7 +9,7 @@ return <TouchableOpacity
 style={ {backgroundColor: bgColor, height: 60, width: 60, justifyContent: "center",
 borderRadius: 60 / 2}}
 
-onPress={() => alert(bgColor.length)}
+onPress={() => alert(bgColor.position)}
 >
 </TouchableOpacity>
 };
