@@ -5,7 +5,7 @@ import CircleComponent from '../components/CircleComponent';
 
 const Screen3 = ({ }) => {
 
-  const CircleArray = () => {
+
     const array = [];
     
     for (let i=0; i<100; i++){
@@ -23,7 +23,9 @@ const Screen3 = ({ }) => {
     }
   return array
 }
-return (CircleArray().map((element) => <CircleComponent bgColor={element.color} position={element.position} />
-));
+  return(
+    CircleArray().map((element) =>{return <CircleComponent bgColor={element.color} position={element.position}/>);
+  )
+
 }
 export default Screen3;
