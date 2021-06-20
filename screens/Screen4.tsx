@@ -6,9 +6,16 @@ import CircleComponent from "../components/circleComponent";
 const Screen4 = () => {
 
     let numToPrint:string;
-    const myNum=4;
-    numToPrint = ""+myNum;
+    numToPrint=0;
 
+    
+    const suma = (num1:number, num2:number)=>{
+        return num1+num2;
+    } 
+
+    for(let i=0; i<5; i++){
+        console.log(suma(1,2));
+    }
 
     let circle:{color?:string, position:number};
 
@@ -19,7 +26,7 @@ const Screen4 = () => {
 
     return (
         <View style={{backgroundColor:"blue", height:"100%", width:"100%"}}>
-            <CircleComponent bgColor="green" position={1}></CircleComponent>
+            <CircleComponent bgColor="green" position={1}/>
             <CircleComponent bgColor="yellow" position={1}></CircleComponent>
         </View>
     )
