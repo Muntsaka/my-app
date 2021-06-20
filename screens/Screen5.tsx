@@ -4,8 +4,9 @@ import { TextInput } from "react-native";
 
 const Screen5 = () => {
     
+  console.log("Repintar");
     /**
-     * const [nomde l'estat, nom de la funció per canviar l'estat] = useState(variable inicial);
+     * const [nomde l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
      */
     const [name, setName] = useState("");
 
@@ -14,8 +15,7 @@ const Screen5 = () => {
       <TextInput
         style={{height: 40}}
         placeholder="Escriu el teu name"
-        onChangeText={name => setName(name)}
-        defaultValue={name}
+        onChangeText={text =>{setName(text)}}
       />
       <Text>Hola {name}</Text>
     </View>
