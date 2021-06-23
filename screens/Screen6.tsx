@@ -24,16 +24,15 @@ const Screen6 = () => {
     }
     
     return (
-    <View style={{padding: 10}}>
+    <View style={{padding: 10, backgroundColor:"pink"}}>
             <TextInput
         style={{height: 40}}
         placeholder="Escriu element de la llista"
         onChangeText={text =>{saveTodo(text)}}
       />
       <Button title="add" onPress={addToList} />
-    {todoList.map((element, position)=>{return <Text key={position}>{element}</Text>})}
-    <Button title="remove" onPress={removeFromList} />
-    {todoList.map((element, position)=>{return <Text key={position}>{element}</Text>})}
+      <Button title="remove" onPress={removeFromList} />
+      {todoList.map((element, position)=>{return <Text key={position}>{element}</Text>})}
     </View>
     
     )
