@@ -4,7 +4,7 @@ import { TextInput } from "react-native";
 
 const Screen6 = () => {
      /**
-     * const [nomde l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
+     * const [nom de l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
      */
     console.log("llista pintar")
     const [todoList, changeTodoList] = useState([""]);
@@ -31,6 +31,8 @@ const Screen6 = () => {
         onChangeText={text =>{saveTodo(text)}}
       />
       <Button title="add" onPress={addToList} />
+    {todoList.map((element, position)=>{return <Text key={position}>{element}</Text>})}
+    <Button title="remove" onPress={removeFromList} />
     {todoList.map((element, position)=>{return <Text key={position}>{element}</Text>})}
     </View>
     
