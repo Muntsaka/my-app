@@ -5,7 +5,7 @@ import CircleComponent from "../components/circleComponent";
 
 const Screen4 = () => {
 
-    let numToPrint:string;
+    let numToPrint:number;
     numToPrint=0;
 
     

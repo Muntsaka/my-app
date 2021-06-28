@@ -2,36 +2,30 @@ import React, { useState } from "react";
 import { Button, Text, View } from "react-native";
 import { TextInput } from "react-native";
 
+interface Task{
+  text:string,
+}
+
 const Screen6 = () => {
-     /**
-     * const [nom de l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
-     */
-    console.log("llista pintar")
-    const [todoList, changeTodoList] = useState([""]);
-    const [todo, saveTodo] = useState("");
 
-    const addToList=()=>{
-      changeTodoList([...todoList, todo])
+    const [task, setTask] = useState({} as Task);
+    const [todoList, addTaskToList] = useState([] as Task[]);
+
+    const addTodo = ()=>{
+      addTaskToList([...todoList, task]);
     }
 
-    /**Exercise: 
-     * Adapt this Screen to allow user to delete a specific todo from the list
-     */
-    const removeFromList=()=>{
-
-      changeTodoList([...todoList.slice(0,-1)])
-
-    }
-    
     return (
-    <><View style={{ padding: 10 }}>
-        <TextInput
-          style={{ height: 40 }}
-          placeholder="Escriu element de la llista"
-          onChangeText={text => { saveTodo(text); } } />
-        <Button title="add" onPress={addToList} />
-        {todoList.map((element, position) => { return <Text key={position}>{element}</Text>; })}
-      </View><Button title="remove" onPress={removeFromList} /></>
+    <View style={{padding: 10}}>
+      <TextInput
+        style={{height: 40}}
+        placeholder="Escriu una tasca"
+        onChangeText={t => setTask({text:t})}
+      />
+      <Button title="afegeix" onPress={addTodo} ></Button>
+      {todoList.map((task, index) => {return <Text key={index}>{task.text}</Text>})}
+    </View>
+    
     )
 
 }
