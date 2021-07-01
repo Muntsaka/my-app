@@ -32,8 +32,9 @@ const Screen6 = () => {
         onChangeText={text =>{saveTodo(text)}}
       />
       <Button title="add" onPress={addToList} />
-    {todoList.map((element, position)=>{ return <ButtonTask color="green" text="Delete" /> }
+    {todoList.map((element, position)=>{ return <ButtonTask color="green" text={element}  /> })}
     </View>
+
     
     )
     
