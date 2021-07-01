@@ -8,7 +8,7 @@ const Screen6 = () => {
      * const [nomde l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
      */
     console.log("llista pintar")
-    const [todoList, changeTodoList] = useState([""]);
+    const [todoList, changeTodoList] = useState([] as string[]);
     const [todo, saveTodo] = useState("");
 
     const addToList=()=>{
@@ -27,12 +27,14 @@ const Screen6 = () => {
     return (
     <View style={{padding: 10}}>
             <TextInput
-        style={{height: 40}}
+        style={{ height: 40 }}
         placeholder="Escriu element de la llista"
-        onChangeText={text =>{saveTodo(text)}}
+        value={todo}
+        onChangeText={text => { saveTodo(text) }}
       />
       <Button title="add" onPress={addToList} />
-    {todoList.map((element, position)=>{ return <ButtonTask color="green" text={element}  /> })}
+    {todoList.map((element, position)=>{ return <ButtonTask color="green" text={element}/> })}
+
     </View>
 
     
