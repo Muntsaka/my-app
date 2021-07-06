@@ -20,7 +20,7 @@ const Screen6 = () => {
      */
     const removeFromList=(x:number)=>{
       console.log(x);
-      changeTodoList([...todoList.splice(position,1)])
+      changeTodoList([...todoList.splice(x,1)])
       changeTodoList([...todoList])
 
     }
