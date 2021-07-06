@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { Button, ProgressViewIOSComponent, Text, View } from "react-native";
 import { TextInput } from "react-native";
 import ButtonTask from "../components/buttontask"
 
@@ -18,9 +18,10 @@ const Screen6 = () => {
     /**Exercise: 
      * Adapt this Screen to allow user to delete a specific todo from the list
      */
-    const removeFromList=()=>{
-
-      changeTodoList([...todoList.slice(0,-1)])
+    const removeFromList=(x:number)=>{
+      console.log(x);
+      changeTodoList([...todoList.splice(position,1)])
+      changeTodoList([...todoList])
 
     }
 
@@ -33,7 +34,8 @@ const Screen6 = () => {
         onChangeText={text => { saveTodo(text) }}
       />
       <Button title="add" onPress={addToList} />
-    {todoList.map((element, position)=>{ return <ButtonTask onPress={removeFromList} color="green" text={element} pos={position}/> })
+
+    {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{removeFromList(position)}} color="green" text={element} pos={position}/> })
     }
     
     </View>
@@ -42,5 +44,4 @@ const Screen6 = () => {
     )
     
 }
-
 export default Screen6; 
