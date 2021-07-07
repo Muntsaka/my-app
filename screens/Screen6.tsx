@@ -8,6 +8,8 @@ const Screen6 = () => {
      * const [nomde l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
      */
     console.log("llista pintar")
+
+
     const [todoList, changeTodoList] = useState([] as string[]);
     const [todo, saveTodo] = useState("");
 
@@ -24,6 +26,19 @@ const Screen6 = () => {
       changeTodoList([...todoList])
 
     }
+
+    const Counter = () => {
+      const [count, setCount] = useState(0)
+  
+    
+      return (
+        <div>
+          <button onClick={() => {setCount(count +1)}}>Click to increment</button>/
+          <button onClick={() => {setCount(count -1)}}>Click to decrement</button>/
+          <p>{count}</p>
+          </div>
+      )
+  }
 
     return (
     <View style={{padding: 10}}>
