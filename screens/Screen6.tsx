@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, ProgressViewIOSComponent, Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 import { TextInput } from "react-native";
 import ButtonTask from "../components/buttontask"
 
@@ -7,42 +7,31 @@ const Screen6 = () => {
      /**
      * const [nomde l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
      */
-    console.log("llista pintar")
-
-
     const [todoList, changeTodoList] = useState([] as string[]);
     const [todo, saveTodo] = useState("");
+    /* Variable count que és un Estat i representa el número de cops que s'ha eliminat una task + mètode per actualitzar el valor setCount*/
+    const [count, setCount] = useState(0)
 
     const addToList=()=>{
       changeTodoList([...todoList, todo])
     }
 
-    /**Exercise: 
-     * Adapt this Screen to allow user to delete a specific todo from the list
-     */
     const removeFromList=(x:number)=>{
-      console.log(x);
-      changeTodoList([...todoList.splice(x,1)])
+      
+      /*TODO  Aquí falta UNA linea */
+      
+      
+      todoList.splice(x,1)
       changeTodoList([...todoList])
-
+      
     }
-
-    const Counter = () => {
-      const [count, setCount] = useState(0)
-  
-    
-      return (
-        <div>
-          <button onClick={() => {setCount(count +1)}}>Click to increment</button>/
-          <button onClick={() => {setCount(count -1)}}>Click to decrement</button>/
-          <p>{count}</p>
-          </div>
-      )
-  }
 
     return (
     <View style={{padding: 10}}>
-            <TextInput
+
+      <Text>{count}</Text> {/* Component visual que es pinta cada cop que hi ha un canvi a la variable count*/}
+
+      <TextInput
         style={{ height: 40 }}
         placeholder="Escriu element de la llista"
         value={todo}
