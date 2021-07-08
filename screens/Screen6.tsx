@@ -18,9 +18,8 @@ const Screen6 = () => {
 
     const removeFromList=(x:number)=>{
       
-      /*TODO  Aquí falta UNA linea */
-      
-      
+      /*TODO  Aquí falta UNA linea */    
+      setCount (x-1)
       todoList.splice(x,1)
       changeTodoList([...todoList])
       
