@@ -25,6 +25,11 @@ const Screen6 = () => {
       
     }
 
+    const empty=()=>{
+      todoList.length = 0
+      
+    }
+
     return (
     <View style={{padding: 10}}>
 
@@ -40,7 +45,7 @@ const Screen6 = () => {
 
     {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{removeFromList(position)}} color="green" text={element} pos={position}/> })
     }
-    
+    <Button title="delete" onPress={empty} />
     </View>
 
     
