@@ -26,7 +26,7 @@ const Screen6 = () => {
     }
 
     const empty=()=>{
-      todoList.length = 0
+      changeTodoList([])
       
     }
 
