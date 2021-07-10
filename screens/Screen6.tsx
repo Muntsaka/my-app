@@ -45,7 +45,8 @@ const Screen6 = () => {
       />
       <Button title="add" onPress={addToList} />
 
-    {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{removeFromList(position)}} color="green" text={element} pos={position }/> })
+      
+      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{removeFromList(position)}} color="green" text={element} pos={position}/> })
     
     }
     <Button title="delete" onPress={empty} />
