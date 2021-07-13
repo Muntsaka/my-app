@@ -9,7 +9,7 @@ return(
       {props.pos + "-" + props.text} 
     </Text>
     <TouchableOpacity onPress={props.onPress} >
-      <Text>Esborra</Text>
+      <Text>Complete</Text>
     </TouchableOpacity>
   </View>)
 }
