@@ -25,19 +25,13 @@ const Screen6 = () => {
       
       
     }
-    const Strike = useState([
+    let Strike = useState([
       {
         content: 'string',
         isCompleted: true,
       }
     ]);
 
-    const empty=()=>{
-      changeTodoList([]){
-      
-      
-    }
-  
     return (
     <View style={{padding: 10}}>
 
@@ -54,9 +48,7 @@ const Screen6 = () => {
       
       {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{Strike(element)}} color="green" text={element} pos={position} isComplete/> })
     
-    }
-    <Button title="delete" onPress={empty} />
-    
+    }  
     </View>
 
     
