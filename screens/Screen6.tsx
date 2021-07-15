@@ -23,9 +23,8 @@ const Screen6 = () => {
       todoList.splice(x,1)
       changeTodoList([...todoList])
       
-      
     }
-    let StrikeThrough:{element?:string, isComplete:boolean};
+    let StrikeText:{textDecorationLine?:string, isComplete:boolean};
 
     return (
     <View style={{padding: 10}}>
@@ -41,7 +40,7 @@ const Screen6 = () => {
       <Button title="add" onPress={addToList} />
 
       
-      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{StrikeThrough}} color="green" text={element} pos={position} isComplete/> })
+      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{StrikeText}} color="green" text={element} pos={position} isComplete={true}/> })
     
     }  
     </View>
