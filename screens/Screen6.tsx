@@ -40,7 +40,7 @@ const Screen6 = () => {
       <Button title="add" onPress={addToList} />
 
       
-      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{StrikeText}} color="green" text={element} pos={position} isComplete={true}/> })
+      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{StrikeText}} color="green" text={element} pos={position} isComplete={false}/> })
     
     }  
     </View>
