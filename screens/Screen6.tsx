@@ -25,12 +25,7 @@ const Screen6 = () => {
       
       
     }
-    let Strike = useState([
-      {
-        content: 'string',
-        isCompleted: true,
-      }
-    ]);
+    let StrikeThrough:{element?:string, isComplete:boolean};
 
     return (
     <View style={{padding: 10}}>
@@ -46,7 +41,7 @@ const Screen6 = () => {
       <Button title="add" onPress={addToList} />
 
       
-      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{Strike(element)}} color="green" text={element} pos={position} isComplete/> })
+      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{StrikeThrough}} color="green" text={element} pos={position} isComplete/> })
     
     }  
     </View>
