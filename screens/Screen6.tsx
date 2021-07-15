@@ -7,25 +7,41 @@ const Screen6 = () => {
      /**
      * const [nomde l'estat, nom de la funció per canviar l'estat] = useState(valor inicial);
      */
-    const [todoList, changeTodoList] = useState([] as string[]);
+
+    /*Estat de la llista d'elements */
+    const [todoList, changeTodoList] = useState([] as {text:string, isComplete:boolean}[]);
+    //const [todoList, changeTodoList] = useState([] as string[]);
+
+    /*Estat del text del TextInput*/
     const [todo, saveTodo] = useState("");
     /* Variable count que és un Estat i representa el número de cops que s'ha eliminat una task + mètode per actualitzar el valor setCount*/
     const [count, setCount] = useState(0)
 
     const addToList=()=>{
-      changeTodoList([...todoList, todo])
+
+      //Teoria arrays spread
+      //const array1 = ["a", "b", "c"] 
+      //const copiadelarray1 = ["1","2", "3", ...array1, "d", "e", "f"]; 
+      
+      changeTodoList([...todoList, {text:todo, isComplete:false}])
+      
+      //changeTodoList([...todoList, todo])
     }
 
-    const removeFromList=(x:number)=>{
-      
+    const removeFromList=(pos:number)=>{  
       /*TODO  Aquí falta UNA linea */    
-      setCount (count+1)
-      todoList.splice(x,1)
+      setCount(count+1)
+      todoList.splice(pos,1)
       changeTodoList([...todoList])
-      
     }
-    let StrikeText:{textDecorationLine?:string, isComplete:boolean};
 
+    const strikeText=(pos:number)=>{  
+      setCount(count+1)  
+
+
+    }
+
+    
     return (
     <View style={{padding: 10}}>
 
@@ -40,9 +56,15 @@ const Screen6 = () => {
       <Button title="add" onPress={addToList} />
 
       
-      {todoList.map((element, position)=>{ return <ButtonTask key={position} onPress={()=>{StrikeText}} color="green" text={element} pos={position} isComplete={false}/> })
+      {/*todoList.map((element, position)=>{ 
+        return <ButtonTask key={position} onPress={()=>{removeFromList(position)}} color="green" text={element} pos={position} isComplete={false}/>
+      })*/}  
+
+      {todoList.map((element, position)=>{ 
+        return <ButtonTask key={position} onPress={()=>{strikeText(position)}} color="green" text={element.text} pos={position} isComplete={element.isComplete}/> 
+        })}  
     
-    }  
+    
     </View>
 
     
