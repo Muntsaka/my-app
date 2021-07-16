@@ -37,8 +37,7 @@ const Screen6 = () => {
 
     const strikeText=(pos:number)=>{  
       setCount(count+1)  
-
-
+      changeTodoList([{...todoList[pos], isComplete:true}])
     }
 
     
