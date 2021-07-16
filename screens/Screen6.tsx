@@ -32,13 +32,17 @@ const Screen6 = () => {
       /*TODO  Aquí falta UNA linea */    
       setCount(count+1)
       todoList.splice(pos,1)
-      changeTodoList([...todoList])
+      changeTodoList([...todoList, {text:todo, isComplete:false}])
     }
 
     const strikeText=(pos:number)=>{  
       setCount(count+1)  
-      changeTodoList([{...todoList[pos], isComplete:true}])
+    
+      todoList.splice(pos,1)
+      changeTodoList([...todoList, {text:todo, isComplete:false}])
     }
+
+    
 
     
     return (
